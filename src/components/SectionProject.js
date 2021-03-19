@@ -3,62 +3,57 @@ import { useRef, useEffect, useState } from "react";
 import Colors from "components/Colors";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: flexbox;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: flex-start;
   margin-top: 60px;
+  color: rgb(20, 20, 20, 0.7);
+  border-bottom: 1px solid rgb(20, 20, 20, 0.1);
+  padding-bottom: 30px;
 `;
 const Header = styled.div`
   display: flex;
-  width: 300px;
+  width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 30px;
 `;
 
 const Title = styled.div`
   font-size: 20px;
   font-weight: 600;
+  color: rgb(20, 20, 20);
 `;
 const Subtitle = styled.div`
   font-style: italic;
   font-size: 18px;
   font-weight: 600;
-  opacity: 0.7;
+  margin: 0px 10px;
 `;
 const Description = styled.div`
   width: 600px;
   font-size: 16px;
-  font-weight: 500;
   line-height: 32px;
-  opacity: 0.7;
   margin-bottom: 30px;
   @media (max-width: 800px) {
     width: 300px;
   }
 `;
 
-const TextList = styled.div`
+const TechniqueList = styled.div`
   width: 600px;
   display: flexbox;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 15px 0px;
+  font-weight: 500;
   @media (max-width: 800px) {
     width: 300px;
   }
 `;
-const Text = styled.div`
+const Technique = styled.div`
   margin: 10px;
-`;
-const Body = styled.div`
-  width: 100%;
-  display: flexbox;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
 `;
 const Image = styled.img`
   width: 160px;
@@ -69,17 +64,18 @@ const Image = styled.img`
   }
 `;
 const Video = styled.video`
-  width: calc(75vw - 350px);
-  min-width: 600px;
+  width: calc(75vw-320px);
+  min-width: 500px;
   max-width: 700px;
-  margin-right: 10px;
   border-radius: 5px;
+  margin-bottom: 10px;
   @media (max-width: 800px) {
     min-width: 300px;
   }
 `;
 
 const ImageList = styled.div`
+  width: 100%;
   display: flexbox;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -87,10 +83,7 @@ const ImageList = styled.div`
   border-radius: 15px;
   background-color: rgb(245, 245, 245);
 `;
-const Divider = styled.div`
-  font-weight: 600;
-  color: rgb(20, 20, 20, 0.7);
-`;
+const Article = styled.div``;
 const ButtonToSite = styled.a`
   width: 200px;
   padding: 10px;
@@ -109,6 +102,9 @@ const ButtonToSite = styled.a`
   }
   transition: all 0.3s forwards;
 `;
+const Text = styled.div`
+  width: 50%;
+`;
 const SectionProject = ({
   title,
   subtitle,
@@ -120,28 +116,28 @@ const SectionProject = ({
 }) => {
   return (
     <Container>
-      <Header>
-        <Title>{title}</Title>
-        <Subtitle>{"-"}</Subtitle>
-        <Subtitle>{subtitle}</Subtitle>
-      </Header>
-      <Body>
-        <Divider>
+      <Text>
+        <Header>
+          <Title>{title}</Title>
+          <Subtitle>{"-"}</Subtitle>
+          <Subtitle>{subtitle}</Subtitle>
+        </Header>
+        <Article>
           <Description>{description}</Description>
           Techniques :
-          <TextList>
+          <TechniqueList>
             {techniques &&
               techniques.length > 0 &&
               techniques.map((technique, index) => (
-                <Text key={index}>{technique}</Text>
+                <Technique key={index}>{technique}</Technique>
               ))}
-          </TextList>
+          </TechniqueList>
           <ButtonToSite href={link} target="_blank">
             Découvrir ce projet
           </ButtonToSite>
-        </Divider>
-        <Video src={video} controls></Video>
-      </Body>
+        </Article>
+      </Text>
+      <Video src={video} controls></Video>
       <ImageList>
         {images &&
           images.length > 0 &&

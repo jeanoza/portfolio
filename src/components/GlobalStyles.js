@@ -8,6 +8,9 @@ const GlobalStyles = createGlobalStyle`
     }
     *{
         box-sizing:border-box;
+        ::-webkit-scrollbar {
+            display: none;
+        }
     }
     body{
         background-color:rgb(255,255,255);
