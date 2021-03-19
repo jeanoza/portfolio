@@ -59,9 +59,13 @@ const Image = styled.img`
   width: 160px;
   height: 100px;
   border-radius: 5px;
-  &:not(:last-child) {
+  :not(:last-child) {
     margin-right: 10px;
   }
+  :hover {
+    transform: scale(1.1);
+  }
+  transition: all 0.3s linear;
 `;
 const Video = styled.video`
   width: calc(75vw-320px);
