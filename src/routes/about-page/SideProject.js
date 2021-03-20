@@ -1,13 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
 import SectionProject from "components/SectionProject";
+import Colors from "components/Colors";
 
 const projectObjArray = [
   {
     title: "Movistagram",
     subtitle: "Projet personnel",
     description:
-      "Il s'agit d'une application qui permet de regarder les films et séries populaires et d'en chercher par le mot clé.",
+      "Il s'agit d'une application qui permet de consulter la list des films, séries populaires et d'en chercher par le mot clé.",
     techniques: [
       "HTML",
       "CSS",
@@ -22,7 +23,7 @@ const projectObjArray = [
     ],
     demo: {
       images: [
-        "/images/movistagram/1.png",
+        "images/movistagram/1.png",
         "images/movistagram/2.png",
         "images/movistagram/3.png",
         "images/movistagram/4.png",
@@ -47,7 +48,7 @@ const projectObjArray = [
     ],
     demo: {
       images: [
-        "/images/jwitter/1.png",
+        "images/jwitter/1.png",
         "images/jwitter/2.png",
         "images/jwitter/3.png",
       ],
@@ -57,11 +58,22 @@ const projectObjArray = [
   },
 ];
 
+const fadeIn = keyframes`
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+`;
 const Container = styled.div`
-  opacity: ${(props) => (props.isHidden ? "1" : "0")};
-  transition: opacity 0.5s ease-in-out;
+  display: ${(props) => (props.isHidden ? "flex" : "none")};
+  flex-direction: column;
+  transition: visibility 1s ease-in-out;
   width: 100%;
   position: absolute;
+  border-bottom: 3px solid ${Colors.lineColor};
+  animation: ${fadeIn} 0.5s ease-in-out;
 `;
 const Title = styled.div`
   font-size: 20px;
@@ -83,19 +95,20 @@ const SideProject = ({ isClicked }) => {
   }, []);
   return (
     <Container isHidden={isClicked}>
-      <Title>Side-Project</Title>
-      {projectArray.map((project, index) => (
-        <SectionProject
-          key={index}
-          title={project.title}
-          subtitle={project.subtitle}
-          description={project.description}
-          techniques={project.techniques}
-          images={project.demo.images}
-          video={project.demo.video}
-          link={project.link}
-        />
-      ))}
+      <Title>SIDE-PROJECT</Title>
+      {projectArray &&
+        projectArray.map((project, index) => (
+          <SectionProject
+            key={index}
+            title={project.title}
+            subtitle={project.subtitle}
+            description={project.description}
+            techniques={project.techniques}
+            images={project.demo.images}
+            video={project.demo.video}
+            link={project.link}
+          />
+        ))}
     </Container>
   );
 };

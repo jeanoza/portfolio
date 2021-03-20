@@ -28,10 +28,12 @@ const Container = styled.div`
   cursor: pointer;
 `;
 
-export default ({ bgUrl, name, onClick }) => {
+const Image = ({ bgUrl, name, onClick }) => {
   return (
     <Container bgUrl={bgUrl} onClick={onClick}>
       {name}
     </Container>
   );
 };
+
+export default Image;

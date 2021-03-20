@@ -1,13 +1,23 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
 import Section from "components/Section";
+import Colors from "components/Colors";
+const fadeIn = keyframes`
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+`;
 
 const Container = styled.div`
-  opacity: ${(props) => (props.isHidden ? "1" : "0")};
-  transition: opacity 0.5s ease-in-out;
+  display: ${(props) => (props.isHidden ? "flex" : "none")};
+  flex-direction: column;
   width: 100%;
-  height: 200px;
   position: absolute;
+  border-bottom: 3px solid ${Colors.lineColor};
+  animation: ${fadeIn} 0.5s ease-in-out;
 `;
 const Title = styled.div`
   font-size: 20px;

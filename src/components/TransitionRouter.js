@@ -1,10 +1,9 @@
 import { Switch, Route, useLocation } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import styled from "styled-components";
 import Home from "routes/Home";
 import About from "routes/About";
 import Contact from "routes/Contact";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import styled from "styled-components";
-import { useEffect, useRef, useState } from "react";
 
 const PageContainer = styled.div`
   position: relative;

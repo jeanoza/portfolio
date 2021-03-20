@@ -50,7 +50,6 @@ const Page = styled.div``;
 const Container = styled(Page)`
   width: 100%;
   height: 95vh;
-  /* overflow-y: scroll; */
   position: absolute;
   top: 40px;
   display: flex;
@@ -113,6 +112,8 @@ const About = () => {
             break;
           case 3:
             setToggles([false, false, false, true]);
+            break;
+          default:
             break;
         }
       } else if (innerText === image.name && toggles[index]) {

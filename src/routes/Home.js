@@ -28,7 +28,7 @@ const slideOutLeft = keyframes`
     transform: translate3d(-100%, 0, 0);
   }
 `;
-const disapear = keyframes`
+const fadeOut = keyframes`
   0% {
     opacity:0.9;
   }
@@ -36,7 +36,7 @@ const disapear = keyframes`
     opacity:0;
   }
 `;
-const appear = keyframes`
+const fadeIn = keyframes`
   0%{
     opacity:0;
   }
@@ -61,10 +61,10 @@ const Container = styled(Page)`
   overflow-y: hidden;
 
   &.page-enter {
-    animation: ${appear} 1s forwards;
+    animation: ${fadeIn} 1s forwards;
   }
   &.page-exit {
-    animation: ${disapear} 1s forwards;
+    animation: ${fadeOut} 1s forwards;
   }
 `;
 Container.defaultProps = {

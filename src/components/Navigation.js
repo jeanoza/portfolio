@@ -1,6 +1,5 @@
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Colors from "components/Colors";
 
 const Container = styled.div`
   position: fixed;
@@ -30,7 +29,7 @@ const Navigation = () => {
           <Link to="/">Accueil</Link>
         </Item>
         <Item>
-          <Link to="/about">Qui suis-je</Link>
+          <Link to="/about">Qui suis-je?</Link>
         </Item>
         <Item>
           <Link to="/contact">Contact</Link>

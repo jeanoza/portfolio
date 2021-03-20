@@ -1,16 +1,21 @@
 import styled from "styled-components";
-import { useRef, useEffect, useState } from "react";
 import Colors from "components/Colors";
 
 const Container = styled.div`
   display: flexbox;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: flex-start;
-  margin-top: 60px;
+  justify-content: space-between;
+  margin-top: 50px;
   color: rgb(20, 20, 20, 0.7);
   border-bottom: 1px solid rgb(20, 20, 20, 0.1);
   padding-bottom: 30px;
+`;
+const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 30px;
 `;
 const Header = styled.div`
   display: flex;
@@ -20,12 +25,12 @@ const Header = styled.div`
   margin-bottom: 30px;
 `;
 
-const Title = styled.div`
+const Title = styled.span`
   font-size: 20px;
   font-weight: 600;
   color: rgb(20, 20, 20);
 `;
-const Subtitle = styled.div`
+const Subtitle = styled.span`
   font-style: italic;
   font-size: 18px;
   font-weight: 600;
@@ -41,6 +46,21 @@ const Description = styled.div`
   }
 `;
 
+const Video = styled.video`
+  width: calc(75vw-320px);
+  min-width: 500px;
+  max-width: 700px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+  :hover {
+    opacity: 1;
+  }
+  @media (max-width: 800px) {
+    min-width: 300px;
+  }
+`;
 const TechniqueList = styled.div`
   width: 600px;
   display: flexbox;
@@ -55,29 +75,24 @@ const TechniqueList = styled.div`
 const Technique = styled.div`
   margin: 10px;
 `;
-const Image = styled.img`
-  width: 160px;
-  height: 100px;
-  border-radius: 5px;
-  :not(:last-child) {
-    margin-right: 10px;
-  }
+const ButtonToSite = styled.a`
+  width: 200px;
+  padding: 10px;
+  background-color: ${Colors.lineColor};
+  border: 2px solid ${Colors.lineColor};
+  font-weight: 600;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
   :hover {
-    transform: scale(1.1);
+    color: rgb(20, 20, 20);
+    background-color: rgb(255, 255, 255);
   }
-  transition: all 0.3s linear;
+  transition: all 0.3s forwards;
 `;
-const Video = styled.video`
-  width: calc(75vw-320px);
-  min-width: 500px;
-  max-width: 700px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  @media (max-width: 800px) {
-    min-width: 300px;
-  }
-`;
-
 const ImageList = styled.div`
   width: 100%;
   display: flexbox;
@@ -87,28 +102,21 @@ const ImageList = styled.div`
   border-radius: 15px;
   background-color: rgb(245, 245, 245);
 `;
-const Article = styled.div``;
-const ButtonToSite = styled.a`
-  width: 200px;
-  padding: 10px;
-  background-color: ${Colors.lineColor};
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  margin: 30px 0px;
-  cursor: pointer;
-  &:hover {
-    color: rgb(20, 20, 20);
-    background-color: rgb(255, 255, 255);
-    border: 1px solid ${Colors.lineColor};
+const Image = styled.img`
+  width: 160px;
+  height: 100px;
+  border-radius: 5px;
+  opacity: 0.7;
+  :not(:last-child) {
+    margin-right: 10px;
   }
-  transition: all 0.3s forwards;
+  :hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  transition: all 0.3s linear;
 `;
-const Text = styled.div`
-  width: 50%;
-`;
+
 const SectionProject = ({
   title,
   subtitle,
@@ -126,27 +134,29 @@ const SectionProject = ({
           <Subtitle>{"-"}</Subtitle>
           <Subtitle>{subtitle}</Subtitle>
         </Header>
-        <Article>
-          <Description>{description}</Description>
-          Techniques :
-          <TechniqueList>
-            {techniques &&
-              techniques.length > 0 &&
-              techniques.map((technique, index) => (
-                <Technique key={index}>{technique}</Technique>
-              ))}
-          </TechniqueList>
-          <ButtonToSite href={link} target="_blank">
-            Découvrir ce projet
-          </ButtonToSite>
-        </Article>
+        <Description>{description}</Description>
+        Techniques :
+        <TechniqueList>
+          {techniques &&
+            techniques.length > 0 &&
+            techniques.map((technique, index) => (
+              <Technique key={index}>{technique}</Technique>
+            ))}
+        </TechniqueList>
+        <ButtonToSite href={link} target="_blank">
+          Découvrir ce projet
+        </ButtonToSite>
       </Text>
-      <Video src={video} controls></Video>
+      <Video src={`${process.env.PUBLIC_URL}/${video}`} controls></Video>
       <ImageList>
         {images &&
           images.length > 0 &&
           images.map((image, index) => (
-            <Image key={index} src={image} alt="" />
+            <Image
+              key={index}
+              src={`${process.env.PUBLIC_URL}/${image}`}
+              alt=""
+            />
           ))}
       </ImageList>
     </Container>
