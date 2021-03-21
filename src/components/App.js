@@ -6,7 +6,7 @@ import TransitionRouter from "components/TransitionRouter";
 function App() {
   return (
     <>
-      <Router basename="/portfolio">
+      <Router>
         <Navigation />
         <Route path="*">
           <TransitionRouter />
