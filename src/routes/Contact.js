@@ -199,7 +199,7 @@ const Contact = () => {
         <br />
         {errors.subject && "Veuillez écrire le titre de votre message"}
         <br />
-        <Text>Message : </Text>
+        <Text>Message</Text>
         <Message
           name="message"
           placeholder="Que voulez-vous me dire..."

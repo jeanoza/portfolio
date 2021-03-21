@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
         ::-webkit-scrollbar {
             display: none;
         }
+        text-align:justify;
     }
     body{
         background-color:rgb(255,255,255);
