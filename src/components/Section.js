@@ -41,6 +41,8 @@ const Item = styled.div`
   background-size: cover;
   background-position: center center;
   border-radius: 25px;
+  filter: gray;
+  -webkit-filter: grayscale(1);
 `;
 const Text = styled.div`
   display: flex;

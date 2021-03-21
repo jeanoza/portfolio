@@ -91,8 +91,7 @@ export const dataObjArray = [
       },
       {
         name: "JavaScript(ES6)",
-        icon_url:
-          "https://cdn.icon-icons.com/icons2/2389/PNG/512/javascript_logo_icon_145155.png",
+        icon_url: "https://www.agile-web.net/res/images/logos/javascript.png",
       },
       {
         name: "React JS",
@@ -146,7 +145,8 @@ export const dataObjArray = [
       {
         name: "Nest JS",
         icon_url:
-          "https://cdn.icon-icons.com/icons2/2148/PNG/512/nestjs_icon_132165.png",
+          "https://ih1.redbubble.net/image.1084299831.8155/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+        // "https://ih1.redbubble.net/image.1084299836.8155/flat,750x1000,075,f.jpg",
       },
     ],
   },
@@ -165,7 +165,6 @@ export const dataObjArray = [
       },
       {
         name: "Java",
-        // icon_url: "https://image.flaticon.com/icons/png/512/121/121152.png",
         icon_url: "https://img.icons8.com/ios/452/java-coffee-cup-logo.png",
       },
       {
