@@ -31,16 +31,17 @@ const Section = styled.div`
 `;
 
 const Image = styled.div`
-  background-image: url("https://user-images.githubusercontent.com/64304902/111873959-2d693700-8993-11eb-8ade-c252d72397d9.png");
+  background-image: url(${process.env.PUBLIC_URL}/images/kyubong_choi_cv.png);
   background-position: center center;
   background-size: 100%;
+  background-repeat: no-repeat;
   width: 320px;
   height: 450px;
   border-radius: 15px;
   margin-right: 20px;
   margin-bottom: 20px;
   :hover {
-    transform: scale(2) translateY(-50px);
+    transform: scale(1.8) translateY(-50px);
   }
   transition: all 0.2s ease-in-out;
 `;
@@ -88,7 +89,7 @@ const CV = ({ isClicked }) => {
             bouton-ci.
           </Description>
           <Button
-            href="https://github.com/jeanoza/jwitter/files/6175755/Kyubong_choi_cv.pdf"
+            href="https://github.com/jeanoza/cvApp/files/6176408/Kyubong_choi_cv_v2.pdf"
             download
           >
             Télecharger mon CV

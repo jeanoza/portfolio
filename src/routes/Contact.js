@@ -1,8 +1,209 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { useForm } from "react-hook-form";
+import Colors from "components/Colors";
 
-const Container = styled.div`
-  position: absolute;
+const fadeOut = keyframes`
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
 `;
-const Contact = () => <Container>Contact</Container>;
+const fadeIn = keyframes`
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+`;
+const Page = styled.div``;
+
+const Container = styled(Page)`
+  width: 100%;
+  height: 95vh;
+  position: absolute;
+  display: flex;
+  top: 40px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  &.page-enter {
+    animation: ${fadeIn} 1s forwards;
+  }
+  &.page-exit {
+    animation: ${fadeOut} 1s forwards;
+  }
+
+  background-color: rgb(255, 255, 255);
+  font-weight: 700;
+`;
+
+const Title = styled.div`
+  width: 75%;
+  min-width: 320px;
+  color: rgb(20, 20, 20);
+  padding: 15px 0px;
+  font-size: 25px;
+  font-weight: 600;
+`;
+const Form = styled.form`
+  width: 75%;
+  min-width: 320px;
+  padding: 20px;
+  border-top: 2px solid ${Colors.lineColor};
+  border-bottom: 2px solid ${Colors.lineColor};
+`;
+const FlexReactive = styled.div`
+  display: flex;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+`;
+const Item = styled.div`
+  width: 50%;
+  min-width: 320px;
+`;
+
+const Name = styled.input`
+  width: 70%;
+  padding: 10px;
+  border-radius: 20px;
+`;
+const Email = styled.input`
+  width: 70%;
+  padding: 10px;
+  border-radius: 20px;
+`;
+const Subject = styled.input`
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
+`;
+const Message = styled.textarea`
+  width: 100%;
+  height: 30vh;
+  min-width: 280px;
+  padding: 10px;
+  border-radius: 20px;
+  resize: none;
+`;
+const Submit = styled.input`
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid ${Colors.lineColor};
+  border-radius: 25px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-color: ${Colors.lineColor};
+  :hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(20, 20, 20);
+  }
+  transition: all 0.3s ease-in-out;
+`;
+
+const Contact = () => {
+  const { register, handleSubmit, errors } = useForm();
+
+  const sendFeedback = (serviceID, templateId, variables) => {
+    window.emailjs
+      .send(serviceID, templateId, variables)
+      .then((res) => {
+        console.log("Email successfully sent!");
+      })
+      .catch((err) =>
+        console.error(
+          "There has been an error.  Here some thoughts on the error that occured:",
+          err
+        )
+      );
+  };
+
+  const onSubmit = (data, r) => {
+    console.log(r);
+    alert(`Merci pour votre message via ${data.email}`);
+    const templateId = "template_f02ahzm";
+    const serviceID = "portfolio_email";
+    sendFeedback(serviceID, templateId, {
+      to_name: "Kyubong",
+      from_name: data.name,
+      message: data.message,
+      subject: data.subject,
+      reply_to: data.email,
+    });
+    r.target.reset();
+  };
+
+  return (
+    <Container>
+      <Title>Contactez-moi</Title>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <FlexReactive>
+          <Item>
+            Nom :{" "}
+            <Name
+              name="name"
+              placeholder="Comment vous appelez-vous.."
+              ref={register({
+                required: "Entrez votre nom s'il vous plaît.",
+                maxLength: {
+                  value: 20,
+                  message: "Veuillez entrer votre nom moins de 20 caractères.",
+                },
+              })}
+            />
+            <br />
+            {errors.name && errors.name.message}
+            <br />
+          </Item>
+          <Item>
+            Email :{" "}
+            <Email
+              name="email"
+              placeholder="Où vais-je répondre..."
+              ref={register({
+                required: "Entrez votre adresse de l'email.",
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: "adresse de l'email invalide",
+                },
+              })}
+            />
+            <br />
+            {errors.email && errors.email.message}
+            <br />
+          </Item>
+        </FlexReactive>
+        Objet :{" "}
+        <Subject
+          name="subject"
+          placeholder="De quoi s'agit-il..."
+          ref={register({
+            required: true,
+          })}
+        />
+        <br />
+        {errors.subject && "Vous n'avez pas écrit l'objet de votre message"}
+        <br />
+        <Message
+          name="message"
+          placeholder="Que voulez-vous me dire..."
+          ref={register({
+            required: true,
+          })}
+        />
+        <br />
+        {errors.message && "Vous avez oublié votre message"}
+        <br />
+        <Submit type="submit" value="Envoyer" />
+      </Form>
+    </Container>
+  );
+};
 
 export default Contact;

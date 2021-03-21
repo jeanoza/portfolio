@@ -28,7 +28,7 @@ const imgObjArray = [
       "https://media.istockphoto.com/photos/resume-applications-on-the-desk-ready-to-be-reviewed-picture-id698820654?k=6&m=698820654&s=612x612&w=0&h=NEdmsSTldovJRPhogfNTwJ82MxDWiOWOUw00_SMC2gg=",
   },
 ];
-const disapear = keyframes`
+const fadeOut = keyframes`
   0% {
     opacity:1;
   }
@@ -36,7 +36,7 @@ const disapear = keyframes`
     opacity:0;
   }
 `;
-const appear = keyframes`
+const fadeIn = keyframes`
   0%{
     opacity:0;
   }
@@ -50,19 +50,19 @@ const Page = styled.div``;
 const Container = styled(Page)`
   width: 100%;
   height: 95vh;
-  position: absolute;
   top: 40px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  &.page-enter {
+    animation: ${fadeIn} 1s forwards;
+  }
+  &.page-exit {
+    animation: ${fadeOut} 1s forwards;
+  }
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  &.page-enter {
-    animation: ${appear} 1s forwards;
-  }
-  &.page-exit {
-    animation: ${disapear} 1s forwards;
-  }
 `;
 const Section = styled.div`
   width: 75%;

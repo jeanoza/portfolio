@@ -14,6 +14,15 @@ const GlobalStyles = createGlobalStyle`
     }
     body{
         background-color:rgb(255,255,255);
+        font-weight:600;
+        color:rgb(20,20,20,0.7);
+    }
+    input,textarea {
+        border:none;
+  background-color: rgb(250, 250, 250);
+        :focus{
+            outline:none;
+        }
     }
 
 `;

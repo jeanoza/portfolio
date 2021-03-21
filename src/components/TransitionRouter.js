@@ -1,4 +1,4 @@
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation, Redirect } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 import Home from "routes/Home";
@@ -21,6 +21,9 @@ const TransitionRouter = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/Contact" component={Contact} />
             <Route exact path="/about" component={About} />
+            <Route path="/*">
+              <Redirect to="/" />
+            </Route>
           </Switch>
         </CSSTransition>
       </TransitionGroup>
