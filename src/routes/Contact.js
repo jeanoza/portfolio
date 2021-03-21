@@ -37,7 +37,9 @@ const Container = styled(Page)`
   }
 
   background-color: rgb(255, 255, 255);
-  font-weight: 700;
+  color: #ff7675;
+  font-style: italic;
+  font-size: 12px;
 `;
 
 const Title = styled.div`
@@ -105,6 +107,13 @@ const Submit = styled.input`
     color: rgb(20, 20, 20);
   }
   transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+`;
+
+const Text = styled.span`
+  color: rgb(20, 20, 20, 0.7);
+  font-weight: 700;
+  font-size: 14px;
 `;
 
 const Contact = () => {
@@ -145,12 +154,12 @@ const Contact = () => {
       <Form onSubmit={handleSubmit(onSubmit)}>
         <FlexReactive>
           <Item>
-            Nom :{" "}
+            <Text>Nom : </Text>
             <Name
               name="name"
               placeholder="Comment vous appelez-vous.."
               ref={register({
-                required: "Entrez votre nom s'il vous plaît.",
+                required: "Entrez votre nom",
                 maxLength: {
                   value: 20,
                   message: "Veuillez entrer votre nom moins de 20 caractères.",
@@ -162,7 +171,7 @@ const Contact = () => {
             <br />
           </Item>
           <Item>
-            Email :{" "}
+            <Text>Email : </Text>
             <Email
               name="email"
               placeholder="Où vais-je répondre..."
@@ -179,7 +188,7 @@ const Contact = () => {
             <br />
           </Item>
         </FlexReactive>
-        Objet :{" "}
+        <Text>Objet : </Text>
         <Subject
           name="subject"
           placeholder="De quoi s'agit-il..."
@@ -188,8 +197,9 @@ const Contact = () => {
           })}
         />
         <br />
-        {errors.subject && "Vous n'avez pas écrit l'objet de votre message"}
+        {errors.subject && "Veuillez écrire le titre de votre message"}
         <br />
+        <Text>Message : </Text>
         <Message
           name="message"
           placeholder="Que voulez-vous me dire..."
@@ -198,7 +208,7 @@ const Contact = () => {
           })}
         />
         <br />
-        {errors.message && "Vous avez oublié votre message"}
+        {errors.message && "Vous avez oublié d'écrire le contenu..."}
         <br />
         <Submit type="submit" value="Envoyer" />
       </Form>

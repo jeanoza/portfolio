@@ -6,28 +6,7 @@ import Competence from "routes/about-page/Competence";
 import SideProject from "routes/about-page/SideProject";
 import CV from "routes/about-page/CV";
 import Colors from "components/Colors";
-
-const imgObjArray = [
-  {
-    name: "KYUBONG",
-    link:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbWsRsb5AWPQsKLg6UNlZnSKg4jniPyJphGg&usqp=CAU",
-  },
-  {
-    name: "COMPETENCES",
-    link: "https://images.itnewsinfo.com/lmi/articles/grande/000000059529.jpg",
-  },
-  {
-    name: "SIDE-PROJECT",
-    link:
-      "https://www.lenouveleconomiste.fr/wp-content/uploads/2019/06/Lefficacit%C3%A9-vari%C3%A9e-des-think-tank-826x459.jpg",
-  },
-  {
-    name: "MON CV",
-    link:
-      "https://media.istockphoto.com/photos/resume-applications-on-the-desk-ready-to-be-reviewed-picture-id698820654?k=6&m=698820654&s=612x612&w=0&h=NEdmsSTldovJRPhogfNTwJ82MxDWiOWOUw00_SMC2gg=",
-  },
-];
+import { imgObjArray } from "data";
 const fadeOut = keyframes`
   0% {
     opacity:1;
