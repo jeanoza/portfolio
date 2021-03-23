@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Colors from "components/Colors";
 
 const Container = styled.div`
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
@@ -42,14 +42,14 @@ const Description = styled.div`
   line-height: 32px;
   margin-bottom: 30px;
   @media (max-width: 800px) {
-    width: 300px;
+    width: 100%;
+    min-width: 300px;
   }
 `;
 
 const Video = styled.video`
-  width: calc(75vw-320px);
+  width: calc(75% - 320px);
   min-width: 500px;
-  max-width: 700px;
   border-radius: 5px;
   margin-bottom: 10px;
   opacity: 0.7;
@@ -58,18 +58,20 @@ const Video = styled.video`
     opacity: 1;
   }
   @media (max-width: 800px) {
+    width: 100%;
     min-width: 300px;
   }
 `;
 const TechniqueList = styled.div`
   width: 600px;
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 15px 0px;
   font-weight: 500;
   @media (max-width: 800px) {
-    width: 300px;
+    width: 100%;
+    min-width: 300px;
   }
 `;
 const Technique = styled.div`
@@ -115,6 +117,10 @@ const Image = styled.img`
     opacity: 1;
   }
   transition: all 0.3s linear;
+  @media (max-width: 800px) {
+    width: 80px;
+    height: 50px;
+  }
 `;
 
 const SectionProject = ({

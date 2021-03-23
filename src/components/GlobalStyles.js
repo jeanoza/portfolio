@@ -17,6 +17,10 @@ const GlobalStyles = createGlobalStyle`
         background-color:rgb(255,255,255);
         font-weight:600;
         color:rgb(20,20,20,0.7);
+        overflow-y:scroll;
+    }
+    #root{
+        overflow-y:scroll;
     }
     input,textarea {
         border:none;

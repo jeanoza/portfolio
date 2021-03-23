@@ -28,7 +28,7 @@ const IconList = styled.div`
   padding: 10px;
 `;
 const TextList = styled.div`
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;

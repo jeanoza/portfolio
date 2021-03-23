@@ -28,7 +28,6 @@ const Page = styled.div``;
 
 const Container = styled(Page)`
   width: 100%;
-  height: 95vh;
   top: 40px;
   position: absolute;
   background-color: rgb(255, 255, 255);
@@ -44,6 +43,7 @@ const Container = styled(Page)`
   align-items: center;
 `;
 const Section = styled.div`
+  position: relative;
   width: 75%;
   min-width: 320px;
   display: flex;
@@ -53,6 +53,7 @@ const Section = styled.div`
   margin: 10px 0px;
 `;
 const Title = styled.div`
+  position: relative;
   width: 75%;
   min-width: 320px;
   color: rgb(20, 20, 20);
@@ -63,7 +64,6 @@ const Title = styled.div`
 const Article = styled.div`
   position: relative;
   width: 75%;
-  height: 100%;
   min-width: 320px;
   border-top: 3px solid ${Colors.lineColor};
   padding: 20px 0px;

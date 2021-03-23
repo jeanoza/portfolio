@@ -14,7 +14,6 @@ const Container = styled.div`
   display: ${(props) => (props.isHidden ? "flex" : "none")};
   flex-direction: column;
   width: 100%;
-  position: absolute;
   border-bottom: 3px solid ${Colors.lineColor};
   padding-bottom: 30px;
   animation: ${fadeIn} 0.5s ease-in-out;
@@ -25,7 +24,7 @@ const Title = styled.div`
   margin-bottom: 50px;
 `;
 const Section = styled.div`
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 `;
@@ -40,10 +39,6 @@ const Image = styled.div`
   border-radius: 15px;
   margin-right: 20px;
   margin-bottom: 20px;
-  :hover {
-    transform: scale(1.8) translateY(-50px);
-  }
-  transition: all 0.2s ease-in-out;
 `;
 
 const Text = styled.div`

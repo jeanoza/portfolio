@@ -16,7 +16,7 @@ const Container = styled.div`
   display: ${(props) => (props.isHidden ? "flex" : "none")};
   flex-direction: column;
   width: 100%;
-  position: absolute;
+  /* position: absolute; */
   border-bottom: 3px solid ${Colors.lineColor};
   animation: ${fadeIn} 0.5s ease-in-out;
 `;
@@ -25,7 +25,7 @@ const Title = styled.div`
   font-weight: 600;
 `;
 const List = styled.div`
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 `;

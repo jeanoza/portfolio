@@ -17,6 +17,7 @@ const Container = styled.div`
   flex-direction: column;
   transition: visibility 1s ease-in-out;
   width: 100%;
+  top: 40px;
   position: absolute;
   border-bottom: 3px solid ${Colors.lineColor};
   animation: ${fadeIn} 0.5s ease-in-out;

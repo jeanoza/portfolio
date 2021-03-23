@@ -17,6 +17,7 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   position: absolute;
+  top: 20px;
   border-bottom: 3px solid ${Colors.lineColor};
   padding-bottom: 30px;
   animation: ${fadeIn} 0.5s ease-in-out;
@@ -26,9 +27,16 @@ const Title = styled.div`
   font-weight: 600;
 `;
 const Section = styled.div`
-  display: flexbox;
+  width: 100%;
+  position: relative;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  //test
+  /* @media (max-width: 1124px) {
+    display: flex;
+    flex-direction: column;
+  } */
 `;
 const Header = styled.div`
   min-width: 300px;
@@ -65,6 +73,7 @@ const Subtitle = styled.div`
 `;
 const Paragraph = styled.div`
   line-height: 24px;
+  font-weight: 400;
 `;
 const List = styled.div`
   width: 60%;
