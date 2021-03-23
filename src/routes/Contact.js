@@ -40,6 +40,7 @@ const Container = styled(Page)`
   color: #ff7675;
   font-style: italic;
   font-size: 12px;
+  padding: 10px;
 `;
 
 const Title = styled.div`
@@ -49,6 +50,9 @@ const Title = styled.div`
   padding: 15px 0px;
   font-size: 25px;
   font-weight: 600;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 const Form = styled.form`
   width: 75%;
@@ -56,6 +60,9 @@ const Form = styled.form`
   padding: 20px;
   border-top: 2px solid ${Colors.lineColor};
   border-bottom: 2px solid ${Colors.lineColor};
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 const FlexReactive = styled.div`
   display: flex;

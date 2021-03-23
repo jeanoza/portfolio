@@ -16,7 +16,6 @@ const Container = styled.div`
   display: ${(props) => (props.isHidden ? "flex" : "none")};
   flex-direction: column;
   width: 100%;
-  /* position: absolute; */
   border-bottom: 3px solid ${Colors.lineColor};
   animation: ${fadeIn} 0.5s ease-in-out;
 `;

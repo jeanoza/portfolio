@@ -41,6 +41,7 @@ const Container = styled(Page)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding: 10px;
 `;
 const Section = styled.div`
   position: relative;
@@ -51,6 +52,9 @@ const Section = styled.div`
   justify-content: space-around;
   align-items: center;
   margin: 10px 0px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 const Title = styled.div`
   position: relative;
@@ -60,6 +64,9 @@ const Title = styled.div`
   padding: 15px 0px;
   font-size: 25px;
   font-weight: 600;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 const Article = styled.div`
   position: relative;
@@ -68,6 +75,9 @@ const Article = styled.div`
   border-top: 3px solid ${Colors.lineColor};
   padding: 20px 0px;
   color: rgb(20, 20, 20);
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const About = () => {
