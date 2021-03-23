@@ -26,6 +26,11 @@ const Container = styled.div`
   }
   transition: all 0.5s;
   cursor: pointer;
+  @media (max-width: 1024px) {
+    min-width: 150px;
+    height: 100px;
+    font-size: 18px;
+  }
 `;
 
 const Image = ({ bgUrl, name, onClick }) => {

@@ -135,7 +135,6 @@ export const dataObjArray = [
       {
         name: "React Native",
         icon_url: "https://img.icons8.com/ios/452/react-native.png",
-        //https://img.icons8.com/ios-filled/452/redux.png
       },
       {
         name: "GraphQL",
@@ -146,7 +145,6 @@ export const dataObjArray = [
         name: "Nest JS",
         icon_url:
           "https://ih1.redbubble.net/image.1084299831.8155/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
-        // "https://ih1.redbubble.net/image.1084299836.8155/flat,750x1000,075,f.jpg",
       },
     ],
   },
@@ -161,7 +159,7 @@ export const dataObjArray = [
       {
         name: "C",
         icon_url:
-          "https://icons.veryicon.com/png/o/object/material-design-icons-1/language-c.png",
+          "https://www.creartbot.com/files/attach/images/1718/777/001/20c6043731e58613e81870ff0702f379.png",
       },
       {
         name: "Java",

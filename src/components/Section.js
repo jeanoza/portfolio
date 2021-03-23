@@ -5,7 +5,7 @@ const Container = styled.div`
   flex-direction: column;
   width: 300px;
   justify-content: flex-start;
-  margin-top: 60px;
+  margin: 50px 0px;
 `;
 const Title = styled.div`
   text-align: center;
@@ -15,6 +15,7 @@ const Title = styled.div`
 `;
 const Subtitle = styled.div`
   font-style: italic;
+  text-align: center;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -24,15 +25,13 @@ const IconList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 10px 0px;
   padding: 10px;
+  margin-bottom: 10px;
 `;
 const TextList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   justify-content: space-around;
-  margin: 10px 0px;
 `;
 const Item = styled.div`
   width: 50px;
@@ -62,11 +61,11 @@ const Section = ({ title, subtitle, languages }) => {
           <Text key={index}>{language.name}</Text>
         ))}
       </TextList>
-      <IconList>
+      {/* <IconList>
         {languages.map((language, index) => (
           <Item key={index} bgUrl={language.icon_url} />
         ))}
-      </IconList>
+      </IconList> */}
     </Container>
   );
 };
