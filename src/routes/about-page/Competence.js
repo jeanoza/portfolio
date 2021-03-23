@@ -15,6 +15,8 @@ const fadeIn = keyframes`
 const Container = styled.div`
   display: ${(props) => (props.isHidden ? "flex" : "none")};
   flex-direction: column;
+  position: absolute;
+  top: 20px;
   width: 100%;
   border-bottom: 3px solid ${Colors.lineColor};
   animation: ${fadeIn} 0.5s ease-in-out;
