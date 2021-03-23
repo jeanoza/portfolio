@@ -41,7 +41,7 @@ const Description = styled.div`
   font-size: 16px;
   line-height: 32px;
   margin-bottom: 30px;
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     width: 100%;
     min-width: 300px;
   }
@@ -57,7 +57,7 @@ const Video = styled.video`
   :hover {
     opacity: 1;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     width: 100%;
     min-width: 300px;
   }
@@ -69,7 +69,7 @@ const TechniqueList = styled.div`
   justify-content: flex-start;
   margin: 15px 0px;
   font-weight: 500;
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     width: 100%;
     min-width: 300px;
   }
@@ -117,7 +117,7 @@ const Image = styled.img`
     opacity: 1;
   }
   transition: all 0.3s linear;
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     width: 80px;
     height: 50px;
   }

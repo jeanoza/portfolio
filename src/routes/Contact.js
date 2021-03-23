@@ -50,7 +50,7 @@ const Title = styled.div`
   padding: 15px 0px;
   font-size: 25px;
   font-weight: 600;
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -60,28 +60,30 @@ const Form = styled.form`
   padding: 20px;
   border-top: 2px solid ${Colors.lineColor};
   border-bottom: 2px solid ${Colors.lineColor};
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
 const FlexReactive = styled.div`
   display: flex;
-  @media (max-width: 1024px) {
+  @media (max-width: 500px) {
     flex-direction: column;
   }
 `;
 const Item = styled.div`
   width: 50%;
-  min-width: 320px;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 const Name = styled.input`
-  width: 70%;
+  width: 80%;
   padding: 10px;
   border-radius: 20px;
 `;
 const Email = styled.input`
-  width: 70%;
+  width: 80%;
   padding: 10px;
   border-radius: 20px;
 `;
@@ -89,7 +91,7 @@ const Subject = styled.input`
   width: 90%;
   padding: 10px;
   border-radius: 20px;
-  @media (max-width: 1024px) {
+  @media (max-width: 500px) {
     width: 80%;
   }
 `;
@@ -161,7 +163,7 @@ const Contact = () => {
       <Form onSubmit={handleSubmit(onSubmit)}>
         <FlexReactive>
           <Item>
-            <Text>Nom : </Text>
+            <Text>Nom </Text>
             <Name
               name="name"
               placeholder="Comment vous appelez-vous.."
@@ -178,7 +180,7 @@ const Contact = () => {
             <br />
           </Item>
           <Item>
-            <Text>Email : </Text>
+            <Text>Email </Text>
             <Email
               name="email"
               placeholder="Où vais-je répondre..."
@@ -195,7 +197,7 @@ const Contact = () => {
             <br />
           </Item>
         </FlexReactive>
-        <Text>Objet : </Text>
+        <Text>Objet </Text>
         <Subject
           name="subject"
           placeholder="De quoi s'agit-il..."

@@ -11,14 +11,13 @@ const Title = styled.div`
   text-align: center;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 40px;
 `;
 const Subtitle = styled.div`
   font-style: italic;
   text-align: center;
   font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 500;
+  margin: 40px 0px;
   opacity: 0.7;
 `;
 const IconList = styled.div`
@@ -46,7 +45,7 @@ const Item = styled.div`
 const Text = styled.div`
   display: flex;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 400;
   font-style: italic;
   margin: 10px;
 `;

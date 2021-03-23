@@ -6,6 +6,7 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  font-weight: 500;
   background-color: rgb(10, 10, 10, 0.9);
   z-index: 10;
 `;

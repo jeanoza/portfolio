@@ -32,11 +32,6 @@ const Section = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  //test
-  /* @media (max-width: 1124px) {
-    display: flex;
-    flex-direction: column;
-  } */
 `;
 const Header = styled.div`
   min-width: 300px;
@@ -44,7 +39,7 @@ const Header = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  @media (max-width: 1124px) {
+  @media (max-width: 1024px) {
     width: 100%;
   }
 `;
@@ -73,16 +68,15 @@ const Subtitle = styled.div`
 `;
 const Paragraph = styled.div`
   line-height: 24px;
-  font-weight: 400;
 `;
 const List = styled.div`
   width: 60%;
   display: flex;
   flex-direction: column;
-  @media (max-width: 1317px) {
-    width: 50%;
+  @media (max-width: 1500px) {
+    width: 40%;
   }
-  @media (max-width: 1124px) {
+  @media (max-width: 1024px) {
     width: 100%;
   }
 `;

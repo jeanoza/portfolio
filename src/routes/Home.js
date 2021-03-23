@@ -73,7 +73,7 @@ Container.defaultProps = {
 
 const Main = styled.div`
   width: 50%;
-  height: 30%;
+  height: 250px;
   min-width: 320px;
   min-height: 200px;
   display: flex;
@@ -81,6 +81,9 @@ const Main = styled.div`
   justify-content: space-around;
   border: 5px solid ${Colors.lineColor};
   padding: 30px 20px;
+  @media (max-width: 968px) {
+    height: 180px;
+  }
 `;
 const Title = styled.div`
   display: flex;
@@ -89,7 +92,10 @@ const Title = styled.div`
   flex-direction: column;
   font-weight: 700;
   font-size: 40px;
-  &::after {
+  @media (max-width: 968px) {
+    font-size: 30px;
+  }
+  ::after {
     content: "";
     background-color: ${Colors.lineColor};
     border-color: black;
@@ -103,6 +109,9 @@ const Subtitle = styled.div`
   justify-content: center;
   font-weight: 600;
   font-size: 20px;
+  @media (max-width: 968px) {
+    font-size: 16px;
+  }
 `;
 
 const Home = () => {

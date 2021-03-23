@@ -10,5 +10,5 @@ Il s'agit de mon portfolio pour l'alternance en 2021
 
 ## ELements à développer
 
-- [ ] Font en mobile
-- [ ] Styling
+- [x] Font en mobile
+- [ ] Changer du Item List(button) dans About page au Navigator dans un écran tablette/mobile(width<1024px?)

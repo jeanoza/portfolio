@@ -14,8 +14,9 @@ const GlobalStyles = createGlobalStyle`
         text-align:justify;
     }
     body{
+        font-family:--apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         background-color:rgb(255,255,255);
-        font-weight:600;
+        font-weight:200;
         color:rgb(20,20,20,0.7);
         overflow-y:scroll;
     }
