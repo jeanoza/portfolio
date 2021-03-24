@@ -6,16 +6,22 @@ const Container = styled.div`
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   margin-top: 50px;
   color: rgb(20, 20, 20, 0.7);
   border-bottom: 1px solid rgb(20, 20, 20, 0.1);
   padding-bottom: 30px;
 `;
 const Text = styled.div`
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-bottom: 30px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    min-width: 300px;
+  }
 `;
 const Header = styled.div`
   display: flex;
@@ -37,7 +43,7 @@ const Subtitle = styled.span`
   margin: 0px 10px;
 `;
 const Description = styled.div`
-  width: 600px;
+  width: 100%;
   font-size: 16px;
   line-height: 32px;
   margin-bottom: 30px;
@@ -48,8 +54,8 @@ const Description = styled.div`
 `;
 
 const Video = styled.video`
-  width: calc(75% - 320px);
-  min-width: 500px;
+  width: 50%;
+  min-width: 400px;
   border-radius: 5px;
   margin-bottom: 10px;
   opacity: 0.7;
@@ -63,7 +69,7 @@ const Video = styled.video`
   }
 `;
 const TechniqueList = styled.div`
-  width: 600px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

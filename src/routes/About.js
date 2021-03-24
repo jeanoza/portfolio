@@ -55,6 +55,11 @@ const Section = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
+  @media (max-width: 767px) {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 `;
 const Title = styled.div`
   position: relative;
