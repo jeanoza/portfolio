@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     input,textarea {
         border:none;
         ::placeholder{
-            color:rgb(20,20,20,0.2);
+            color:rgb(20,20,20,0.3);
         }
   background-color: rgb(250, 250, 250);
         :focus{

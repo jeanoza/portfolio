@@ -63,8 +63,8 @@ const Photo = styled.div`
 const Subtitle = styled.div`
   font-size: 18px;
   font-weight: 600;
+  font-style: italic;
   margin: 40px 0px;
-  color: rgb(20, 20, 20, 1);
 `;
 const Paragraph = styled.div`
   line-height: 24px;
@@ -85,7 +85,6 @@ const Article = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(20, 20, 20, 0.7);
 `;
 const Me = ({ isClicked }) => {
   const [me, setMe] = useState([]);

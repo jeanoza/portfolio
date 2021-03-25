@@ -8,7 +8,6 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
-  color: rgb(20, 20, 20, 0.7);
   border-bottom: 1px solid rgb(20, 20, 20, 0.1);
   padding-bottom: 30px;
 `;
@@ -48,7 +47,6 @@ const Description = styled.div`
   line-height: 32px;
   margin-bottom: 30px;
   @media (max-width: 1024px) {
-    width: 100%;
     min-width: 300px;
   }
 `;
@@ -74,7 +72,8 @@ const TechniqueList = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 15px 0px;
-  font-weight: 500;
+  font-weight: 400;
+  font-style: italic;
   @media (max-width: 1024px) {
     width: 100%;
     min-width: 300px;
