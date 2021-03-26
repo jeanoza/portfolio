@@ -17,6 +17,7 @@ const Container = styled.div`
   filter: grayscale(1);
   border-radius: 15px;
   margin-bottom: 10px;
+  margin: 10px 0px;
 
   :hover,
   :focus {
@@ -34,7 +35,6 @@ const Container = styled.div`
   @media (max-width: 767px) {
     width: 20%;
     background-image: none;
-    color: rgb(20, 20, 20, 0.7);
     border-radius: 0px;
     justify-content: center;
     align-items: center;
@@ -42,8 +42,8 @@ const Container = styled.div`
     height: 0;
     padding: 10px 0px;
     filter: none;
-    min-width: 50px;
-    font-size: 12px;
+    min-width: 80px;
+    font-size: 10px;
   }
 `;
 

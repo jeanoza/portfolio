@@ -9,6 +9,9 @@ const Container = styled.div`
   font-weight: 500;
   background-color: rgb(10, 10, 10, 0.9);
   z-index: 10;
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 const List = styled.ul`
   width: 300px;

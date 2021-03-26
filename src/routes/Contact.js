@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { useForm } from "react-hook-form";
 import Colors from "components/Colors";
+import { Link } from "react-router-dom";
 
 const fadeOut = keyframes`
   0% {
@@ -125,6 +126,28 @@ const Text = styled.span`
   font-size: 14px;
 `;
 
+const LinkList = styled.div`
+  position: fixed;
+  display: none;
+  @media (max-width: 767px) {
+    width: 95%;
+    top: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+const SLink = styled(Link)`
+  color: rgb(255, 255, 255);
+  background-color: rgb(20, 20, 20);
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.5;
+`;
 const Contact = () => {
   const { register, handleSubmit, errors } = useForm();
 
@@ -221,6 +244,10 @@ const Contact = () => {
         <br />
         <Submit type="submit" value="Envoyer" />
       </Form>
+      <LinkList>
+        <SLink to="/">Accueil</SLink>
+        <SLink to="/about">Qui-je suis?</SLink>
+      </LinkList>
     </Container>
   );
 };

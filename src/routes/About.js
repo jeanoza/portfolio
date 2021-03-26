@@ -7,6 +7,7 @@ import SideProject from "routes/about-page/SideProject";
 import CV from "routes/about-page/CV";
 import Colors from "components/Colors";
 import { imgObjArray } from "data";
+import { Link } from "react-router-dom";
 const fadeOut = keyframes`
   0% {
     opacity:1;
@@ -56,7 +57,14 @@ const Section = styled.div`
     width: 100%;
   }
   @media (max-width: 767px) {
+    position: fixed;
     width: 100%;
+    top: 0;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(20, 20, 20, 0.9);
+    z-index: 10;
+
     flex-wrap: nowrap;
     justify-content: space-between;
   }
@@ -83,6 +91,28 @@ const Article = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
+`;
+const LinkList = styled.div`
+  position: fixed;
+  display: none;
+  @media (max-width: 767px) {
+    width: 100%;
+    top: 30%;
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+const SLink = styled(Link)`
+  color: rgb(255, 255, 255);
+  background-color: rgb(20, 20, 20);
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.5;
 `;
 
 const About = () => {
@@ -135,6 +165,10 @@ const About = () => {
         <SideProject isClicked={toggles[2]} title={images[2].name} />
         <CV isClicked={toggles[3]} title={images[3].name} />
       </Article>
+      <LinkList>
+        <SLink to="/">Accueil</SLink>
+        <SLink to="/contact">Contact</SLink>
+      </LinkList>
     </Container>
   );
 };

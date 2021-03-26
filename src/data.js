@@ -1,7 +1,7 @@
 //About
 export const imgObjArray = [
   {
-    name: "KYUBONG",
+    name: "KYUBONG?",
     link:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbWsRsb5AWPQsKLg6UNlZnSKg4jniPyJphGg&usqp=CAU",
   },
