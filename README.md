@@ -12,3 +12,8 @@ Il s'agit de mon portfolio pour l'alternance en 2021
 
 - [x] Font en mobile
 - [ ] Changer du Item List(button) dans About page au Navigator dans un écran tablette/mobile(width<1024px?)
+
+## useContext branch - à supprimer
+
+- J'ai envisager à utiliser "useContext" dans ce projet.
+- Cependant, il vaudrait mieux garder "props" de peur d'altérer la lisibilité.
