@@ -50,6 +50,9 @@ const HeaderTitle = styled.div`
   font-size: 16px;
   font-weight: 600;
   opacity: 0.7;
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
 `;
 const Photo = styled.div`
   background-image: url(${(props) => props.bgImage});
@@ -65,6 +68,9 @@ const Subtitle = styled.div`
   font-weight: 600;
   font-style: italic;
   margin: 40px 0px;
+  @media (max-width: 767px) {
+    font-size: 13px;
+  }
 `;
 const Paragraph = styled.div`
   line-height: 24px;

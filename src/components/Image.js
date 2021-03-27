@@ -33,7 +33,7 @@ const Container = styled.div`
     font-size: 18px;
   }
   @media (max-width: 767px) {
-    width: 20%;
+    width: 24%;
     background-image: none;
     border-radius: 0px;
     justify-content: center;
@@ -43,7 +43,7 @@ const Container = styled.div`
     padding: 10px 0px;
     filter: none;
     min-width: 80px;
-    font-size: 10px;
+    font-size: 12px;
   }
 `;
 

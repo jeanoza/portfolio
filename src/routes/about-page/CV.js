@@ -66,6 +66,7 @@ const Button = styled.a`
   color: rgb(255, 255, 255);
   background-color: ${Colors.lineColor};
   border: 2px solid ${Colors.lineColor};
+  margin-bottom: 20px;
 
   :hover {
     background-color: rgb(255, 255, 255);
