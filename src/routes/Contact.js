@@ -1,7 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { useForm } from "react-hook-form";
 import Colors from "components/Colors";
-import { Link } from "react-router-dom";
 
 const fadeOut = keyframes`
   0% {
@@ -60,7 +59,7 @@ const Form = styled.form`
   min-width: 320px;
   padding: 20px;
   border-top: 2px solid ${Colors.lineColor};
-  border-bottom: 2px solid ${Colors.lineColor};
+  border-bottom: 3px solid ${Colors.lineColor};
   @media (max-width: 768px) {
     width: 100%;
   }

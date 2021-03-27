@@ -88,7 +88,7 @@ const Article = styled.div`
   position: relative;
   width: 75%;
   min-width: 320px;
-  border-top: 3px solid ${Colors.lineColor};
+  border-top: 2px solid ${Colors.lineColor};
   padding: 20px 0px;
   color: rgb(20, 20, 20);
   @media (max-width: 768px) {
