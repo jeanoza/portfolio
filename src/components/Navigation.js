@@ -31,9 +31,6 @@ const List = styled.ul`
 `;
 const Item = styled.li`
   width: 33.3%;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
   color: rgb(255, 255, 255);
   transition: all 0.5s ease-in-out;
   :hover {
@@ -41,25 +38,30 @@ const Item = styled.li`
     background-color: rgb(255, 255, 255);
   }
 `;
-
+const SLink = styled(Link)`
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
 const Navigation = () => {
   return (
     <Container>
       <List>
         <Item>
-          <Link to="/">
+          <SLink to="/">
             <FontAwesomeIcon icon={faHome} size="1x" />
-          </Link>
+          </SLink>
         </Item>
         <Item>
-          <Link to="/about">
+          <SLink to="/about">
             <FontAwesomeIcon icon={faUser} size="1x" />
-          </Link>
+          </SLink>
         </Item>
         <Item>
-          <Link to="/contact">
+          <SLink to="/contact">
             <FontAwesomeIcon icon={faEnvelope} size="1x" />
-          </Link>
+          </SLink>
         </Item>
       </List>
     </Container>
