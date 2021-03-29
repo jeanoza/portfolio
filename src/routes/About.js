@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import Image from "components/Image";
 import Me from "routes/about-page/Me";
@@ -7,6 +7,7 @@ import SideProject from "routes/about-page/SideProject";
 import CV from "routes/about-page/CV";
 import Colors from "components/Colors";
 import { imgObjArray } from "data";
+import axios from "axios";
 
 const fadeOut = keyframes`
   0% {
@@ -97,13 +98,27 @@ const Article = styled.div`
 `;
 
 const About = () => {
-  const [images, setImages] = useState(imgObjArray);
+  const [loading, setLoading] = useState(true);
+  const [images, setImages] = useState([]);
   const [toggles, setToggles] = useState([true, false, false, false]);
+
+  const getImages = async () => {
+    try {
+      const { data } = await axios("/api/about");
+      setImages(data);
+      setLoading(false);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  useEffect(() => {
+    getImages();
+  }, []);
   const onClick = (event) => {
     const {
       target: { innerText },
     } = event;
-    imgObjArray.forEach((image, index) => {
+    images.forEach((image, index) => {
       if (innerText === image.name && !toggles[index]) {
         switch (index) {
           case 0:
@@ -127,7 +142,9 @@ const About = () => {
     });
   };
 
-  return (
+  return loading ? (
+    <div>loading</div>
+  ) : (
     <Container>
       <Title>DECOUVREZ-MOI : </Title>
       <Section>
