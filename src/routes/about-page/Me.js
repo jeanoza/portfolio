@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
 import Colors from "components/Colors";
-import { MeObj } from "data";
+import { meApi, MeObj } from "data";
 
 const fadeIn = keyframes`
   0%{
@@ -94,12 +94,23 @@ const Article = styled.div`
 `;
 const Me = ({ isClicked }) => {
   const [me, setMe] = useState([]);
-
+  const [loading, setLoading] = useState(true);
+  const getMe = async () => {
+    try {
+      const { data } = await meApi();
+      setMe(data[0]);
+      setLoading(false);
+    } catch (e) {
+      console.log(e);
+    }
+  };
   useEffect(() => {
-    MeObj && setMe(MeObj);
+    getMe();
   }, []);
 
-  return (
+  return loading ? (
+    "loading"
+  ) : (
     <Container isHidden={isClicked}>
       <Title>KYUBONG?</Title>
       <Section>

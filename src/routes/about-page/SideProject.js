@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
 import SectionProject from "components/SectionProject";
 import Colors from "components/Colors";
-import { projectObjArray } from "data";
+import { projectObjArray, projectApi } from "data";
 
 const fadeIn = keyframes`
   0%{
@@ -29,10 +29,13 @@ const Title = styled.div`
 
 const SideProject = ({ isClicked }) => {
   const [projectArray, setProjectArray] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const getProjectArray = () => {
+  const getProjectArray = async () => {
     try {
-      projectObjArray && setProjectArray(projectObjArray);
+      const { data } = await projectApi();
+      setProjectArray(data);
+      setLoading(false);
     } catch (e) {
       console.log(e);
     }
@@ -40,7 +43,9 @@ const SideProject = ({ isClicked }) => {
   useEffect(() => {
     getProjectArray();
   }, []);
-  return (
+  return loading ? (
+    "loading"
+  ) : (
     <Container isHidden={isClicked}>
       <Title>SIDE-PROJECT</Title>
       {projectArray &&

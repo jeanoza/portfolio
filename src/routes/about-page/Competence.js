@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
 import Section from "components/Section";
 import Colors from "components/Colors";
-import { dataObjArray, competenceApi } from "data";
+import { competenceApi } from "data";
 const fadeIn = keyframes`
   0%{
     opacity:0;
