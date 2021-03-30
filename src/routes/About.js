@@ -6,8 +6,7 @@ import Competence from "routes/about-page/Competence";
 import SideProject from "routes/about-page/SideProject";
 import CV from "routes/about-page/CV";
 import Colors from "components/Colors";
-import { imgObjArray } from "data";
-import axios from "axios";
+import { btnImages } from "data";
 
 const fadeOut = keyframes`
   0% {
@@ -104,7 +103,7 @@ const About = () => {
 
   const getImages = async () => {
     try {
-      const { data } = await axios("/api/about");
+      const { data } = await btnImages();
       setImages(data);
       setLoading(false);
     } catch (e) {

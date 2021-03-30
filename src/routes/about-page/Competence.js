@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
 import Section from "components/Section";
 import Colors from "components/Colors";
-import { dataObjArray } from "data";
+import { dataObjArray, competenceApi } from "data";
 const fadeIn = keyframes`
   0%{
     opacity:0;
@@ -32,13 +32,26 @@ const List = styled.div`
 `;
 
 const Competence = ({ isClicked, title }) => {
+  const [loading, setLoading] = useState(true);
   const [competences, setCompetences] = useState([]);
 
+  const getCompetences = async () => {
+    try {
+      const { data } = await competenceApi();
+      setCompetences(data);
+      setLoading(false);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   useEffect(() => {
-    setCompetences(dataObjArray);
+    getCompetences();
   }, []);
 
-  return (
+  return loading ? (
+    "loading"
+  ) : (
     <Container isHidden={isClicked}>
       <Title>{title}</Title>
       <List>
