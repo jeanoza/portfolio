@@ -24,14 +24,17 @@ export const imgObjArray = [
 //About-page > Me
 export const MeObj = {
   title: "Je suis développeur front-end junior JavaScript | React JS",
+  subtitle: `"Make from a crisis to an opportunity"`,
+  introduction: `Covid-19 et les confinements ont bloqué mes études en sociologie. Or, j'ai su profiter de cette période difficile pour découvrir le monde "Coding". Au bout de mon apprentissage autodidacte, je me suis rendu compte que le développeur n'était pas un génie mais une personne persévérant et curieux, et moi aussi...`,
   photo: "images/kyubong_photo.jpg",
   descs: [
     {
-      subtitle: `Du print(‘hello world’) au app.get(‘/’, (req,res) => {...});`,
+      title: `Du print(‘hello world’) au app.get(‘/’, (req,res) => {...});`,
+      subtitle: `: apprentissage autonome selon besoin`,
       paragraph: `L’an dernier, j’ai commencé à coder via Python considéré un langage
             éducatif et plus ou moins accessible pour les débutants. Mon
             aspiration à faire quelque chose de visible m’a conduit à étudier
-            Web – Html, Css et JavaScript. Après avoir peint mon index.html,
+            Web – HTML, CSS et JavaScript. Après avoir peint mon index.html,
             j’ai voulu y ajouter la fonctionnalité telle que d’écrire et de
             sauvegarder les informations. C’était le moment où j’étudiais le
             Server à travers Java, Spring Boot et MySQL grâce auxquels j’ai
@@ -55,7 +58,8 @@ export const MeObj = {
             compréhensibles.`,
     },
     {
-      subtitle: `Sortie du localhost :8080`,
+      title: `Sortie du localhost :8080`,
+      subtitle: `: ambition de devenir "Pro"`,
       paragraph: `Quand je codais tout seul, je me disais souvent qu’il me faudrait
             sortir du port 8080(3000 ou 3306), cela dit, afin d’améliorer mes
             compétences informatiques et de coder de manière clean, j’aurais

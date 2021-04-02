@@ -43,6 +43,10 @@ const Header = styled.div`
     width: 100%;
   }
 `;
+const Introduction = styled.div`
+  width: 350px;
+  line-height: 24px;
+`;
 const HeaderTitle = styled.div`
   display: flex;
   justify-content: center;
@@ -51,9 +55,19 @@ const HeaderTitle = styled.div`
   font-weight: 600;
   opacity: 0.7;
   @media (max-width: 767px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 `;
+const HeaderSubtitle = styled.div`
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  margin: 40px 0px;
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+`;
+
 const Photo = styled.div`
   background-image: url(${(props) => props.bgImage});
   background-position: center center;
@@ -63,11 +77,20 @@ const Photo = styled.div`
   height: 150px;
   margin: 50px 0px;
 `;
-const Subtitle = styled.div`
+const ArticleTitle = styled.div`
   font-size: 18px;
   font-weight: 600;
   font-style: italic;
-  margin: 40px 0px;
+  margin-top: 40px;
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+`;
+const ArticleSubtitle = styled.div`
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 40px;
   @media (max-width: 767px) {
     font-size: 13px;
   }
@@ -106,13 +129,16 @@ const Me = ({ isClicked }) => {
         <Header>
           <Photo bgImage={`${process.env.PUBLIC_URL}/${me.photo}`} />
           <HeaderTitle>{me.title}</HeaderTitle>
+          <HeaderSubtitle>{me.subtitle}</HeaderSubtitle>
+          <Introduction>{me.introduction}</Introduction>
         </Header>
         <List>
           {me.descs &&
             me.descs.length > 0 &&
             me.descs.map((desc, index) => (
               <Article key={index}>
-                <Subtitle>{desc.subtitle}</Subtitle>
+                <ArticleTitle>{desc.title}</ArticleTitle>
+                <ArticleSubtitle>{desc.subtitle}</ArticleSubtitle>
                 <Paragraph>{desc.paragraph}</Paragraph>
               </Article>
             ))}
