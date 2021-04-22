@@ -23,9 +23,10 @@ export const imgObjArray = [
 
 //About-page > Me
 export const MeObj = {
-  title: "Je suis développeur front-end junior JavaScript | React JS",
+  title: "Persévérant, Curieux, Organisé et Solidaire",
   subtitle: `"Make from a crisis to an opportunity"`,
-  introduction: `Covid-19 et les confinements ont bloqué mes études en sociologie. Or, j'ai su profiter de cette période difficile pour découvrir le monde "Coding". Au bout de mon apprentissage autodidacte, je me suis rendu compte que le développeur n'était pas un génie mais une personne persévérant et curieux, et moi aussi...`,
+  introduction: `Covid-19 et les confinements ont bloqué mes études en sociologie. Or, j'ai su profiter de cette période difficile pour découvrir le monde "Coding".
+  Au bout de mon apprentissage autodidacte, passionné et curieux de ce monde, j'ai décidé de m'y plonger jusqu'au bout.`,
   photo: "images/kyubong_photo.jpg",
   descs: [
     {
@@ -59,7 +60,7 @@ export const MeObj = {
     },
     {
       title: `Sortie du localhost :8080`,
-      subtitle: `: ambition de devenir "Pro"`,
+      subtitle: `: ambition de devenir "pro"`,
       paragraph: `Quand je codais tout seul, je me disais souvent qu’il me faudrait
             sortir du port 8080(3000 ou 3306), cela dit, afin d’améliorer mes
             compétences informatiques et de coder de manière clean, j’aurais

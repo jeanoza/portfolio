@@ -31,7 +31,7 @@ const Section = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 const Header = styled.div`
   min-width: 300px;
@@ -50,10 +50,11 @@ const Introduction = styled.div`
 const HeaderTitle = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 350px;
   font-size: 16px;
   font-weight: 600;
   opacity: 0.7;
+  line-height: 24px;
   @media (max-width: 767px) {
     font-size: 14px;
   }

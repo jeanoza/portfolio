@@ -32,7 +32,7 @@ const Section = styled.div`
 `;
 
 const Image = styled.div`
-  background-image: url(${process.env.PUBLIC_URL}/images/kyubong_choi_cv.png);
+  background-image: url(${process.env.PUBLIC_URL}/images/Kyubong_cv.jpg);
   background-position: center center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -87,7 +87,7 @@ const CV = ({ isClicked }) => {
             bouton-ci.
           </Description>
           <Button
-            href="https://github.com/jeanoza/cvApp/files/6176408/Kyubong_choi_cv_v2.pdf"
+            href="https://github.com/jeanoza/portfolio/files/6356442/Kyubong_choi_cv_v4.pdf"
             download
           >
             Télecharger mon CV

@@ -120,7 +120,7 @@ const Home = () => {
       <Main>
         <Title>Kyubong CHOI</Title>
         <Subtitle>Développeur Front-end Junior</Subtitle>
-        <Subtitle>Javascript | React</Subtitle>
+        <Subtitle>Javascript | React.js | Node.js</Subtitle>
       </Main>
     </Container>
   );
