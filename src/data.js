@@ -195,7 +195,7 @@ export const projectObjArray = [
     title: "Movistagram",
     subtitle: "Projet personnel",
     description:
-      "Il s'agit d'une application qui permet de consulter la list des films, séries populaires et d'en chercher par le mot clé.",
+      "Il s'agit d'une application qui permet de consulter la list des films, séries populaires et d'en chercher par mot clé.",
     techniques: [
       "HTML",
       "CSS",
@@ -242,5 +242,17 @@ export const projectObjArray = [
       video: "images/jwitter/demo.mp4",
     },
     link: "https://jeanoza.github.io/jwitter_ts",
+  },
+  {
+    title: "Candidature List",
+    subtitle: "Projet personnel",
+    description:
+      "Il s'agit d'une application qui permet d'enrégistrer mes candidatures, de les mettre à jour et de les effacer via MongoDB. Je l'ai fait pour appliquer mes connaissances en backend à ce dont j'ai besoin.",
+    techniques: ["Mongoose", "MongoDB", "React", "Node.js", "Express"],
+    demo: {
+      images: [],
+      video: "images/candidat_list/demo.mov",
+    },
+    link: "https://github.com/jeanoza/candidature-list",
   },
 ];

@@ -20,27 +20,10 @@ const Subtitle = styled.div`
   margin: 40px 0px;
   opacity: 0.7;
 `;
-const IconList = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 10px;
-  margin-bottom: 10px;
-`;
 const TextList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-`;
-const Item = styled.div`
-  width: 50px;
-  height: 50px;
-  background-image: url(${(props) => props.bgUrl});
-  background-size: cover;
-  background-position: center center;
-  border-radius: 25px;
-  filter: gray;
-  -webkit-filter: grayscale(1);
 `;
 const Text = styled.div`
   display: flex;

@@ -159,17 +159,17 @@ const SectionProject = ({
         </ButtonToSite>
       </Text>
       <Video src={`${process.env.PUBLIC_URL}/${video}`} controls></Video>
-      <ImageList>
-        {images &&
-          images.length > 0 &&
-          images.map((image, index) => (
+      {images && images.length > 0 && (
+        <ImageList>
+          {images.map((image, index) => (
             <Image
               key={index}
               src={`${process.env.PUBLIC_URL}/${image}`}
               alt=""
             />
           ))}
-      </ImageList>
+        </ImageList>
+      )}
     </Container>
   );
 };

@@ -2,32 +2,32 @@ import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import Colors from "components/Colors";
 
-// animation to slide in the home page from left
-const slideInLeft = keyframes`
-  from {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
+//animation to slide in the home page from left
+// const slideInLeft = keyframes`
+//   from {
+//     -webkit-transform: translate3d(-100%, 0, 0);
+//     transform: translate3d(-100%, 0, 0);
+//     visibility: visible;
+//   }
 
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-`;
+//   to {
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
+// `;
 // animation to slide out the home page to the left
-const slideOutLeft = keyframes`
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+// const slideOutLeft = keyframes`
+//   from {
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
 
-  to {
-    visibility: hidden;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-`;
+//   to {
+//     visibility: hidden;
+//     -webkit-transform: translate3d(-100%, 0, 0);
+//     transform: translate3d(-100%, 0, 0);
+//   }
+// `;
 const fadeOut = keyframes`
   0% {
     opacity:0.9;

@@ -97,7 +97,7 @@ const Article = styled.div`
 `;
 
 const About = () => {
-  const [images, setImages] = useState(imgObjArray);
+  const [images] = useState(imgObjArray);
   const [toggles, setToggles] = useState([true, false, false, false]);
   const onClick = (event) => {
     const {
