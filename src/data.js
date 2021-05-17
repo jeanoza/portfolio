@@ -104,7 +104,7 @@ export const dataObjArray = [
           "https://pbs.twimg.com/profile_images/763061332702736385/KoK6gHzp_400x400.jpg",
       },
       {
-        name: "Node JS",
+        name: "Node JS & Express JS",
         icon_url: "http://cdn.onlinewebfonts.com/svg/img_189697.png",
       },
     ],
@@ -114,7 +114,7 @@ export const dataObjArray = [
     subtitle: '"Je suis en train d\'apprendre" :',
     languages: [
       {
-        name: "TypeScript",
+        name: "Docker",
         icon_url:
           "https://d33wubrfki0l68.cloudfront.net/58f9f46aa7c55d69b118dbea6899525f14ee257e/bd73d/img/tech/typescript.svg",
       },
@@ -124,7 +124,7 @@ export const dataObjArray = [
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOk2uzJkQw5MAnJ7UqMongGV0Ohe0zHPiUdA&usqp=CAU",
       },
       {
-        name: "Express",
+        name: "Jira",
         icon_url: "https://images.tute.io/tute/topic/express-js.png",
       },
     ],
